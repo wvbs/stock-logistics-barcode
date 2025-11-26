@@ -149,6 +149,7 @@ function setupView() {
                             type: "success",
                         });
                     } else if (payload.apply_inventory) {
+                        return; // FIXME: It is broadcasting to all employees with open inventory app
                         actionService.doAction(
                             "stock_barcodes.action_stock_barcodes_action_client"
                         );
